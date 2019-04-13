@@ -1,9 +1,13 @@
+<form [formGroup]="carDes">
+
 <div>
   <label>
     Select A Color
   </label>
 
-  <select>
+  <select
+    name="color"
+    [formControl]="color">
     <option *ngFor="let color of colors" 
     [value]="color.value">
       {{color.value}}
@@ -16,7 +20,9 @@
     Sunroof?
   </label>
 
-  <select>
+  <select
+    name="sunroof"
+    [formControl]="sunroof">
     <option *ngFor="let option of options" 
     [value]="option.value">
       {{option.value}}
@@ -29,7 +35,9 @@
     4 Wheel Drive?
   </label>
 
-  <select>
+  <select
+    name="fourWheel"
+    [formControl]="fourWheel">
     <option *ngFor="let option of options" 
     [value]="option.value">
       {{option.value}}
@@ -42,7 +50,9 @@
     Low Mileage?
   </label>
 
-  <select>
+  <select
+    name="lowMileage"
+    [formControl]="lowMileage">
     <option *ngFor="let option of options" 
     [value]="option.value">
       {{option.value}}
@@ -55,7 +65,9 @@
     Power Windows?
   </label>
 
-  <select>
+  <select
+    name="powerWindows"
+    [formControl]="powerWindows">
     <option *ngFor="let option of options" 
     [value]="option.value">
       {{option.value}}
@@ -68,7 +80,9 @@
     Navigation?
   </label>
 
-  <select>
+  <select
+    name="navigation"
+    [formControl]="navigation">
     <option *ngFor="let option of options" 
     [value]="option.value">
       {{option.value}}
@@ -81,10 +95,28 @@
     Heated Seats?
   </label>
 
-  <select>
+  <select
+    name="heatedSeats"
+    [formControl]="heatedSeats">
     <option *ngFor="let option of options" 
     [value]="option.value">
       {{option.value}}
     </option>
   </select>
+</div>
+
+</form>
+
+<hr/>
+
+<div>
+    <p>Make: {{desiredCar.make}}</p>
+    <p>Color: {{desiredCar.color}}</p>
+    <p>Year: {{desiredCar.year}}</p>
+    <p>Has Sunroof?: {{desiredCar.hasSunroof}}</p>
+    <p>Has 4 wheel drive?: {{desiredCar.isFourWheelDrive}}</p>
+    <p>Has low mileage?: {{desiredCar.hasLowMiles}}</p>
+    <p>Has power windows?: {{desiredCar.hasPowerWindows}}</p>
+    <p>Has Navigation?: {{desiredCar.hasNavigation}}</p>
+    <p>Has heated seats?: {{desiredCar.hasHeatedSeats}}</p>
 </div>

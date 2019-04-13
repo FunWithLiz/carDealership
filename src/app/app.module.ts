@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Car } from './car.service';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({ 
   declarations: [
@@ -11,6 +13,7 @@ import { Car } from './car.service';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [ Car],
   bootstrap: [AppComponent]
