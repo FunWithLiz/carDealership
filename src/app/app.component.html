@@ -110,13 +110,15 @@
 <hr/>
 
 <div>
-    <p>Make: {{desiredCar.make}}</p>
-    <p>Color: {{desiredCar.color}}</p>
-    <p>Year: {{desiredCar.year}}</p>
-    <p>Has Sunroof?: {{desiredCar.hasSunroof}}</p>
-    <p>Has 4 wheel drive?: {{desiredCar.isFourWheelDrive}}</p>
-    <p>Has low mileage?: {{desiredCar.hasLowMiles}}</p>
-    <p>Has power windows?: {{desiredCar.hasPowerWindows}}</p>
-    <p>Has Navigation?: {{desiredCar.hasNavigation}}</p>
-    <p>Has heated seats?: {{desiredCar.hasHeatedSeats}}</p>
+  <ul *ngFor="let car of cars">
+    <li>Make: {{car.make}}</li>
+    <p>Color: {{car.color}}</p>
+    <p>Year: {{car.year}}</p>
+    <p>Has Sunroof?: {{car.hasSunroof}}</p>
+    <p>Has 4 wheel drive?: {{car.isFourWheelDrive}}</p>
+    <p>Has low mileage?: {{car.hasLowMiles}}</p>
+    <p>Has power windows?: {{car.hasPowerWindows}}</p>
+    <p>Has Navigation?: {{car.hasNavigation}}</p>
+    <p>Has heated seats?: {{car.hasHeatedSeats}}</p>
+  </ul>  
 </div>
