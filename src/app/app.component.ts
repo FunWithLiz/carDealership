@@ -39,6 +39,10 @@ colors = [
   {
     name: "gray",
     value: "gray"
+  },
+  {
+    name: "silver",
+    value: "silver"
   }
 ];
 
@@ -80,6 +84,30 @@ options = [
     console.log("the sunroof values", sunroofValue)
   });
 
+  this.fourWheel.valueChanges.subscribe((fourWheelValue) => {
+    this.carService.filterFourWheel(fourWheelValue);
+    console.log("the fourWheel values", fourWheelValue)
+  });
+
+  this.lowMileage.valueChanges.subscribe((lowMileageValue) => {
+    this.carService.filterLowMileage(lowMileageValue);
+    console.log("the lowMileage values", lowMileageValue)
+  });
+  
+  this.powerWindows.valueChanges.subscribe((powerWindowsValue) => {
+    this.carService.filterPowerWindows(powerWindowsValue);
+    console.log("the powerWindows values", powerWindowsValue)
+  });
+
+  this.navigation.valueChanges.subscribe((navigationValue) => {
+    this.carService.filterNavigation(navigationValue);
+    console.log("the navigation values", navigationValue)
+  });
+
+  this.heatedSeats.valueChanges.subscribe((heatedSeatsValue) => {
+    this.carService.filterHeatedSeats(heatedSeatsValue);
+    console.log("the heatedSeats values", heatedSeatsValue)
+  });
  }
 
  ngOnInit(){
