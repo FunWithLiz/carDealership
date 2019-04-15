@@ -1,13 +1,40 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
 select{
     border: 1px solid black;
 }
 
 p{
-    line-height: 2.5px;
-    padding-left: 10px;
+    margin: 2px;
+    padding-left: 15px;
+    text-transform: capitalize;
 }
 
 li{
  padding-top: 8px;  
- padding-bottom: -15px; 
+ padding-bottom: -30px; 
+ list-style-type: none;
+ font-weight: bold;
+}
+
+.container{
+    padding: 5px;
+}
+
+.child{
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+
+.carData{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+form{
+    padding: 10px;
 }

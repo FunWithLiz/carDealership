@@ -1,3 +1,10 @@
+<div class="container">
+  <div class="child">
+
+    <h1>Car Dealership Challenge</h1>
+
+    <h3>Created by Elizabeth Fun</h3>
+
 <form [formGroup]="carDes">
 
 <div>
@@ -109,7 +116,7 @@
 
 <hr/>
 
-<div>
+<div class="carData">
   <ul *ngFor="let car of cars">
     <li>Make: {{car.make}}</li>
     <p>Color: {{car.color}}</p>
@@ -121,4 +128,8 @@
     <p>Has Navigation?: {{car.hasNavigation}}</p>
     <p>Has heated seats?: {{car.hasHeatedSeats}}</p>
   </ul>  
+</div>
+
+  </div>
+
 </div>
