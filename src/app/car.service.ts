@@ -151,6 +151,8 @@ returnCarArray = [];
             return car.color.toLowerCase() === color.toLowerCase();
         })
         console.log("the return cars array of color", this.returnCarArray)
+        return this.returnCarArray
+
     }
 
     filterSunroof(sunroof){
@@ -159,6 +161,7 @@ returnCarArray = [];
             return car.hasSunroof === sunroof; 
         })
         console.log("the return cars array of sunroof", this.returnCarArray)
+        return this.returnCarArray
     }
 
     filterFourWheel(fourWheel){
@@ -167,6 +170,8 @@ returnCarArray = [];
             return car.isFourWheelDrive === fourWheel; 
         })
         console.log("the return cars array of fourwheel", this.returnCarArray)
+        return this.returnCarArray
+
     }
 
     filterLowMileage(lowMileage){
@@ -174,6 +179,7 @@ returnCarArray = [];
             return car.hasLowMiles === lowMileage; 
         })
         console.log("the return cars array of fourwheel", this.returnCarArray)
+        return this.returnCarArray
     }
 
     filterPowerWindows(powerWindows){
@@ -181,6 +187,7 @@ returnCarArray = [];
             return car.hasPowerWindows === powerWindows; 
         })
         console.log("the return cars array of fourwheel", this.returnCarArray)
+        return this.returnCarArray
     }
 
     filterNavigation(navigation){
@@ -188,6 +195,7 @@ returnCarArray = [];
             return car.hasNavigation === navigation; 
         })
         console.log("the return cars array of navigation", this.returnCarArray)
+        return this.returnCarArray
     }
 
     filterHeatedSeats(heatedSeats){
@@ -195,6 +203,7 @@ returnCarArray = [];
             return car.hasHeatedSeats === heatedSeats; 
         })
         console.log("the return cars array of heatedSeats", this.returnCarArray)
+        return this.returnCarArray
     }
 
 }

@@ -12,6 +12,8 @@ export class AppComponent implements OnInit{
 
 filterCars: any;
 
+showFilteredCars: any;
+
 cars = this.carService.carData;
 
   carDes: FormGroup;
@@ -77,37 +79,49 @@ options = [
   this.color.valueChanges.subscribe((colorValue) => {
     this.filterCars = this.carService.filterColor(colorValue);
     console.log("the color values", colorValue)
+    this.cars = this.carService.filterColor(colorValue);
   });
 
   this.sunroof.valueChanges.subscribe((sunroofValue) => {
     this.carService.filterSunroof(sunroofValue);
     console.log("the sunroof values", sunroofValue)
+    this.cars = this.carService.filterSunroof(sunroofValue);
   });
 
   this.fourWheel.valueChanges.subscribe((fourWheelValue) => {
     this.carService.filterFourWheel(fourWheelValue);
     console.log("the fourWheel values", fourWheelValue)
+    this.cars = this.carService.filterFourWheel(fourWheelValue);
   });
 
   this.lowMileage.valueChanges.subscribe((lowMileageValue) => {
     this.carService.filterLowMileage(lowMileageValue);
     console.log("the lowMileage values", lowMileageValue)
+    this.cars = this.carService.filterLowMileage(lowMileageValue);
   });
   
   this.powerWindows.valueChanges.subscribe((powerWindowsValue) => {
     this.carService.filterPowerWindows(powerWindowsValue);
     console.log("the powerWindows values", powerWindowsValue)
+    this.cars = this.carService.filterPowerWindows(powerWindowsValue);
   });
 
   this.navigation.valueChanges.subscribe((navigationValue) => {
     this.carService.filterNavigation(navigationValue);
     console.log("the navigation values", navigationValue)
+    this.cars = this.carService.filterNavigation(navigationValue);
   });
 
   this.heatedSeats.valueChanges.subscribe((heatedSeatsValue) => {
     this.carService.filterHeatedSeats(heatedSeatsValue);
     console.log("the heatedSeats values", heatedSeatsValue)
+    this.cars = this.carService.filterHeatedSeats(heatedSeatsValue);
   });
+
+
+
+
+
  }
 
  ngOnInit(){
