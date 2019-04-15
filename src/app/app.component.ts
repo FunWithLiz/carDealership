@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Car } from './car.service';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Car } from './car.service';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +9,10 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class AppComponent implements OnInit{
   title = 'carDealership';
+
+filterCars: any;
+
+cars = this.carService.carData;
 
   carDes: FormGroup;
   color: FormControl;
@@ -66,6 +70,16 @@ options = [
     Nagivation: this.navigation,
     HeatedSeats: this.heatedSeats
   })
+  this.color.valueChanges.subscribe((colorValue) => {
+    this.filterCars = this.carService.filterColor(colorValue);
+    console.log("the color values", colorValue)
+  });
+
+  this.sunroof.valueChanges.subscribe((sunroofValue) => {
+    this.carService.filterSunroof(sunroofValue);
+    console.log("the sunroof values", sunroofValue)
+  });
+
  }
 
  ngOnInit(){

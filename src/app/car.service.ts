@@ -1,31 +1,32 @@
 import { Injectable, OnInit } from '@angular/core';
+import { filter } from 'lodash';
 
 @Injectable()
 export class Car implements OnInit {
 
+returnCarArray = [];
 
     id: string; 
     make: string; 
     year: number;
     color: string; 
     price: number;
-    hasSunroof: boolean; 
+    hasSunroof: string; 
     isFourWheelDrive: boolean; 
     hasLowMiles: boolean;
     hasPowerWindows: boolean; 
     hasNavigation: boolean;
     hasHeatedSeats: boolean;
 
-    desiredCars = [];
 
-  public exData = [
+  public carData = [
     {
         id: "59d2698c2eaefb1268b69ee5", 
         make: "Chevy", 
         year: 2016, 
         color: "Gray", 
         price: 16106, 
-        hasSunroof: false, 
+        hasSunroof: 'false', 
         isFourWheelDrive: true, 
         hasLowMiles: true, 
         hasPowerWindows: false, 
@@ -38,7 +39,7 @@ export class Car implements OnInit {
         year: 2012, 
         color: "Silver", 
         price: 18696, 
-        hasSunroof: true, 
+        hasSunroof: 'true', 
         isFourWheelDrive: true, 
         hasLowMiles: false, 
         hasPowerWindows: true, 
@@ -51,7 +52,7 @@ export class Car implements OnInit {
         year: 2016, 
         color: "Black", 
         price: 18390, 
-        hasSunroof: true, 
+        hasSunroof: 'true', 
         isFourWheelDrive: false, 
         hasLowMiles: false, 
         hasPowerWindows: true, 
@@ -63,7 +64,7 @@ export class Car implements OnInit {
         year: 2015, 
         color: "White", 
         price: 15895, 
-        hasSunroof: true, 
+        hasSunroof: 'true', 
         isFourWheelDrive: false, 
         hasLowMiles: true, 
         hasPowerWindows: true, 
@@ -76,7 +77,7 @@ export class Car implements OnInit {
         year: 2014, 
         color: "Gray", 
         price: 19710, 
-        hasSunroof: false, 
+        hasSunroof: 'false', 
         isFourWheelDrive: true, 
         hasLowMiles: false, 
         hasPowerWindows: false, 
@@ -89,7 +90,7 @@ export class Car implements OnInit {
         year: 2014, 
         color: "Red", 
         price: 19248, 
-        hasSunroof: true, 
+        hasSunroof: 'true', 
         isFourWheelDrive: false, 
         hasLowMiles: true, 
         hasPowerWindows: true, 
@@ -102,7 +103,7 @@ export class Car implements OnInit {
         year: 2015, 
         color: "Black", 
         price: 13170, 
-        hasSunroof: true, 
+        hasSunroof: 'true', 
         isFourWheelDrive: false, 
         hasLowMiles: true, 
         hasPowerWindows: true, 
@@ -115,7 +116,7 @@ export class Car implements OnInit {
         year: 2013, 
         color: "Gray", 
         price: 15669, 
-        hasSunroof: false, 
+        hasSunroof: 'false', 
         isFourWheelDrive: false, 
         hasLowMiles: true, 
         hasPowerWindows: false, 
@@ -128,7 +129,7 @@ export class Car implements OnInit {
         year: 2015, 
         color: "White", 
         price: 16629, 
-        hasSunroof: false, 
+        hasSunroof: 'false', 
         isFourWheelDrive: false, 
         hasLowMiles: true, 
         hasPowerWindows: false, 
@@ -144,4 +145,20 @@ export class Car implements OnInit {
     ngOnInit(){
         
     }
+
+    filterColor(color){
+        this.returnCarArray = filter(this.carData, (car) => {
+            return car.color.toLowerCase() === color.toLowerCase();
+        })
+        console.log("the return cars array of color", this.returnCarArray)
+    }
+
+    filterSunroof(sunroof){
+        this.returnCarArray = filter(this.carData, (car) => {
+            // console.log(typeof sunroof === 'boolean')
+            return car = car.hasSunroof === sunroof; 
+        })
+        console.log("the return cars array of sunroof", this.returnCarArray)
+    }
+
 }
