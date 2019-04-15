@@ -150,26 +150,21 @@ returnCarArray = [];
         this.returnCarArray = filter(this.carData, (car) => {
             return car.color.toLowerCase() === color.toLowerCase();
         })
-        console.log("the return cars array of color", this.returnCarArray)
         return this.returnCarArray
 
     }
 
     filterSunroof(sunroof){
         this.returnCarArray = filter(this.carData, (car) => {
-            // console.log(typeof sunroof === 'boolean')
             return car.hasSunroof === sunroof; 
         })
-        console.log("the return cars array of sunroof", this.returnCarArray)
         return this.returnCarArray
     }
 
     filterFourWheel(fourWheel){
         this.returnCarArray = filter(this.carData, (car) => {
-            // console.log(typeof sunroof === 'boolean')
             return car.isFourWheelDrive === fourWheel; 
         })
-        console.log("the return cars array of fourwheel", this.returnCarArray)
         return this.returnCarArray
 
     }
@@ -178,7 +173,6 @@ returnCarArray = [];
         this.returnCarArray = filter(this.carData, (car) => {
             return car.hasLowMiles === lowMileage; 
         })
-        console.log("the return cars array of fourwheel", this.returnCarArray)
         return this.returnCarArray
     }
 
@@ -186,7 +180,6 @@ returnCarArray = [];
         this.returnCarArray = filter(this.carData, (car) => {
             return car.hasPowerWindows === powerWindows; 
         })
-        console.log("the return cars array of fourwheel", this.returnCarArray)
         return this.returnCarArray
     }
 
@@ -194,7 +187,6 @@ returnCarArray = [];
         this.returnCarArray = filter(this.carData, (car) => {
             return car.hasNavigation === navigation; 
         })
-        console.log("the return cars array of navigation", this.returnCarArray)
         return this.returnCarArray
     }
 
@@ -202,7 +194,6 @@ returnCarArray = [];
         this.returnCarArray = filter(this.carData, (car) => {
             return car.hasHeatedSeats === heatedSeats; 
         })
-        console.log("the return cars array of heatedSeats", this.returnCarArray)
         return this.returnCarArray
     }
 
